@@ -1,0 +1,51 @@
+Clock Sync Simulation
+---------------------
+
+Simulation of clock synchronization algorithms in the omnet++ framework.
+
+2011, Jens Steinhauser (e0826623@student.tuwien.ac.at)
+
+
+License
+-------
+
+This program is licensed under the GNU GPL, either version 2 of the license, or
+(at your option) any later version.
+
+
+Installation Instructions
+-------------------------
+
+Prerequisites:
+
+- Install the OMNET++ simulation framework from: http://www.omnetpp.org/
+
+  Detailed installation instructions can be found on their homepage.
+
+- Install the INET networks simulation package (add-on for OMNET++) from: http://inet.omnetpp.org/
+
+  Installation instructions can be found in the INSTALL file in the INET tarball.
+
+Clock Sync Simulation:
+
+- Create a copy of the repository of this project in the same directory where the INET
+  sources reside. That's because the Makefile needs access to the INET header files.
+  The INET directory should be called just 'inet'.
+
+  An example for a working constellation:
+
+    ~/work/inet         <- sources of INET
+    ~/work/ptpsim       <- sources of this project
+
+  Alternatively, you can:
+
+  - Create a symlink called 'inet' that points to the read INET directory.
+
+  - Change the variable INETDIR in the top level Makefile of this project.
+
+- Use these commands to compile and run the ptp simulation:
+
+    > make makefiles
+    > make
+    > make run-sim
+

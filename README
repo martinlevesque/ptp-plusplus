@@ -4,6 +4,7 @@ ptp++
 Author: Martin Levesque <levesque.martin@gmail.com>
 
 A Precision Time Protocol (PTP) module for OMNeT++ INET 2.6. Allows to measure the PTP accuracy under different configurations and traffic loads, using any INET components (routers, etc.).
+PTP is implemented as a UDP application as in the standard (https://standards.ieee.org/findstds/interps/1588-2008.html).
 
 Some sub-modules were adapted from https://github.com/JenSte/omnet-ptp
 

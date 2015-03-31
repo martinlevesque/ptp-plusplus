@@ -1,0 +1,70 @@
+<config>
+
+  <interface hosts="s[0]" towards="router" address="172.0.0.1" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[1]" towards="router" address="172.0.0.2" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[2]" towards="router" address="172.0.0.3" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[3]" towards="router" address="172.0.0.4" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[4]" towards="router" address="172.0.0.5" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[5]" towards="router" address="172.0.0.6" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[6]" towards="router" address="172.0.0.7" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[7]" towards="router" address="172.0.0.8" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[8]" towards="router" address="172.0.0.9" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="s[9]" towards="router" address="172.0.0.10" netmask="255.255.255.0" mtu="1500"/>
+  
+  <interface hosts="router" towards="s[0]" address="172.0.0.11" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[1]" address="172.0.0.12" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[2]" address="172.0.0.13" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[3]" address="172.0.0.14" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[4]" address="172.0.0.15" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[5]" address="172.0.0.16" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[6]" address="172.0.0.17" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[7]" address="172.0.0.18" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[8]" address="172.0.0.19" netmask="255.255.255.0" mtu="1500"/>
+  <interface hosts="router" towards="s[9]" address="172.0.0.20" netmask="255.255.255.0" mtu="1500"/>
+  
+  <interface hosts="m" towards="router" address="172.0.1.1" netmask="255.255.255.0" mtu="1500"/>
+  
+  <interface hosts="router" towards="m" address="172.0.1.2" netmask="255.255.255.0" mtu="1500"/>
+
+  <multicast-group hosts="s[0] s[1] s[2] s[3] s[4] s[5] s[6] s[7] s[8] s[9]" address="225.0.0.1"/>
+  
+  <multicast-group hosts="m" address="225.0.0.2"/>
+  
+  <route hosts="s[0]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[1]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[2]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[3]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[4]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[5]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[6]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[7]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[8]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="s[9]" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  
+  <route hosts="m" destination="s[0]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[1]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[2]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[3]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[4]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[5]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[6]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[7]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[8]" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="m" destination="s[9]" netmask="/32" metric="0" interface="eth0"/>
+  
+  <route hosts="router" destination="m" netmask="/32" metric="0" interface="eth0"/>
+  <route hosts="router" destination="s[0]" netmask="/32" metric="0" interface="eth1"/>
+  <route hosts="router" destination="s[1]" netmask="/32" metric="0" interface="eth2"/>
+  <route hosts="router" destination="s[2]" netmask="/32" metric="0" interface="eth3"/>
+  <route hosts="router" destination="s[3]" netmask="/32" metric="0" interface="eth4"/>
+  <route hosts="router" destination="s[4]" netmask="/32" metric="0" interface="eth5"/>
+  <route hosts="router" destination="s[5]" netmask="/32" metric="0" interface="eth6"/>
+  <route hosts="router" destination="s[6]" netmask="/32" metric="0" interface="eth7"/>
+  <route hosts="router" destination="s[7]" netmask="/32" metric="0" interface="eth8"/>
+  <route hosts="router" destination="s[8]" netmask="/32" metric="0" interface="eth9"/>
+  <route hosts="router" destination="s[9]" netmask="/32" metric="0" interface="eth10"/>
+  
+  <multicast-route hosts="router" groups="225.0.0.1" children=">s[0] >s[1] >s[2] >s[3] >s[4] >s[5] >s[6] >s[7] >s[8] >s[9]"/>
+  <multicast-route hosts="router" groups="225.0.0.2" children=">m"/>
+  
+</config>

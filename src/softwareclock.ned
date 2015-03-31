@@ -17,4 +17,12 @@
 //  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 
-package ptp;
+package ptp.src;
+
+simple SoftwareClock 
+{
+	parameters:
+		@display("i=device/clock");
+		string ptpImplementationType;
+		int nbSyntonizationPoints = default(0); // 0 = disabled
+}

@@ -1,6 +1,8 @@
 //
-//  Clock Synchronization Simulation in OMNet++
-//  Copyright (C) 2012 Jens Steinhauser
+// ptp++
+// Copyright (C) 2015 Martin Levesque <levesque.martin@gmail.com>
+// 
+// Adapted from Jens Steinhauser https://github.com/JenSte/omnet-ptp
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -17,4 +19,29 @@
 //  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 
-package ptp;
+cplusplus {{
+#include "simtime.h"
+#include "ptp.h"
+}};
+
+class noncobject SimTime;
+class noncobject Ptp::FrameType;
+
+packet PtpPacket
+{
+	Ptp::FrameType type;
+
+	SimTime ttx;
+	SimTime trx;
+	double levMinDelay;
+	double levMeanDelay;
+
+	SimTime realTtx;
+	SimTime realTrx;
+	
+	string destIP;
+}
+
+packet PtpClassProbe // for class probe
+{
+}

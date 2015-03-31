@@ -17,4 +17,15 @@
 //  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 
-package ptp;
+package ptp.simulation;
+
+import ptp.src.hardwareclock.*;
+
+network HardwareClockTestNetwork {
+	submodules:
+		testApp: ScheduleTestApp                          { parameters: @display("p=600,200"); }
+
+		constantDriftClock: ConstantDrift                 { parameters: @display("p=200,200"); }
+		boundedDriftClock: BoundedDrift                   { parameters: @display("p=200,400"); }
+		boundedDriftDeviationClock: BoundedDriftVariation { parameters: @display("p=200,600"); }
+}

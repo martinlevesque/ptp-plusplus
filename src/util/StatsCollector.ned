@@ -17,4 +17,16 @@
 //  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 
-package ptp;
+package ptp.src.util;
+
+simple StatsCollector 
+{
+	parameters:
+		@display("i=device/printer");
+		
+		double backgroundTrafficDownstreamOfferedLoad = default(0);
+		double backgroundTrafficUpstreamOfferedLoad = default(0);
+		int backgroundTrafficMessageLength = default(0);
+		double extraPTPUpstreamDelay @unit(s) = default(0.0s);
+		int nbPTPDuppToSend = default(0);
+}

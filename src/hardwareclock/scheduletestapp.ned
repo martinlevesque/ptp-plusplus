@@ -1,6 +1,6 @@
 //
 //  Clock Synchronization Simulation in OMNet++
-//  Copyright (C) 2012 Jens Steinhauser
+//  Copyright (C) 2012 Jens Steinhauser (https://github.com/JenSte/omnet-ptp)
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -17,4 +17,9 @@
 //  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 
-package ptp;
+package ptp.src.hardwareclock;
+
+simple ScheduleTestApp {
+	parameters:
+		@display("i=block/app");
+}

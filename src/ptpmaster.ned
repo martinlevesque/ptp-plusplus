@@ -1,6 +1,8 @@
 //
-//  Clock Synchronization Simulation in OMNet++
-//  Copyright (C) 2012 Jens Steinhauser
+// ptp++
+// Copyright (C) 2015 Martin Levesque <levesque.martin@gmail.com>
+// 
+// Adapted from Jens Steinhauser https://github.com/JenSte/omnet-ptp
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -17,4 +19,28 @@
 //  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 
-package ptp;
+package ptp.src;
+
+import inet.applications.IUDPApp;
+
+simple PtpMaster like IUDPApp
+{
+	parameters:
+		int syncRate = default(10);
+		
+		int localPort = default(319);
+		int destPort = default(319);
+		
+		bool joinLocalMulticastGroups = default(true);
+		string destAddresses = default("");
+		
+		string ptpPostAsymmAlgo = default(""); // "", "Lee" or "Lv"
+		
+		string nbPTPDuppToSend = default("");
+		
+		bool withProbeClass = default(false);
+
+	gates:
+		input udpIn @labels(UDPControlInfo/up);
+        output udpOut @labels(UDPControlInfo/down);
+}

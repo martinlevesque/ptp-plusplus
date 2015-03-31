@@ -1,6 +1,6 @@
 //
 //  Clock Synchronization Simulation in OMNet++
-//  Copyright (C) 2012 Jens Steinhauser
+//  Copyright (C) 2015 Martin Levesque
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by

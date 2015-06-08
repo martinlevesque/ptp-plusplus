@@ -32,8 +32,8 @@ using namespace std;
 
 Define_Module(UberUDPBasicApp);
 
-simsignal_t UberUDPBasicApp::sentPkSignal = registerSignal("sentPk");
-simsignal_t UberUDPBasicApp::rcvdPkSignal = registerSignal("rcvdPk");
+//simsignal_t UberUDPBasicApp::sentPkSignal = registerSignal("sentPk");
+//simsignal_t UberUDPBasicApp::rcvdPkSignal = registerSignal("rcvdPk");
 
 UberUDPBasicApp::UberUDPBasicApp()
 {
@@ -197,7 +197,7 @@ void UberUDPBasicApp::sendPacket()
 
     IPvXAddress destAddr = chooseDestAddr();
 
-    emit(sentPkSignal, payload);
+    //emit(sentPkSignal, payload);
     socket.sendTo(payload, destAddr, destPort);
     numSent++;
 }
@@ -298,7 +298,7 @@ void UberUDPBasicApp::handleMessageWhenUp(cMessage *msg)
 
 void UberUDPBasicApp::processPacket(cPacket *pk)
 {
-    emit(rcvdPkSignal, pk);
+    //emit(rcvdPkSignal, pk);
     EV << "Received packet: " << UDPSocket::getReceivedPacketInfo(pk) << endl;
     delete pk;
     numReceived++;

@@ -25,7 +25,7 @@ using namespace std;
 
 Define_Module(UberUDPSink);
 
-simsignal_t UberUDPSink::rcvdPkSignal = registerSignal("rcvdPk");
+//simsignal_t UberUDPSink::rcvdPkSignal = registerSignal("rcvdPk");
 
 
 void UberUDPSink::initialize(int stage)
@@ -73,7 +73,7 @@ void UberUDPSink::finish()
 void UberUDPSink::processPacket(cPacket *pk)
 {
     EV << "Received packet: " << UDPSocket::getReceivedPacketInfo(pk) << endl;
-    emit(rcvdPkSignal, pk);
+    //emit(rcvdPkSignal, pk);
     delete pk;
 
     numReceived++;

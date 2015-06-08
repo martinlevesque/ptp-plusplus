@@ -17,8 +17,8 @@
 //
 
 
-#ifndef __INET_UDPSINK_H
-#define __INET_UDPSINK_H
+#ifndef __PTP_UBERUDPSINK_H
+#define __PTP_UBERUDPSINK_H
 
 #include "INETDefs.h"
 
@@ -34,7 +34,7 @@ class INET_API UberUDPSink : public ApplicationBase
   protected:
     UDPSocket socket;
     int numReceived;
-    static simsignal_t rcvdPkSignal;
+    //static simsignal_t rcvdPkSignal;
 
   protected:
     virtual void processPacket(cPacket *msg);

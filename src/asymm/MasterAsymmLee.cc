@@ -20,7 +20,7 @@
 #include <iostream>
 #include "ApplicationBase.h"
 #include "MasterAsymmLee.h"
-#include "Ptp.h"
+#include "ptp.h"
 #include "MACAddress.h"
 #include "ptpmaster.h"
 

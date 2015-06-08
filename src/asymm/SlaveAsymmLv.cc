@@ -22,7 +22,7 @@
 #include "SlaveAsymmLv.h"
 #include "SlaveAsymmAlgo.h"
 #include "MasterAsymmLv.h"
-#include "Ptp.h"
+#include "ptp.h"
 #include "MACAddress.h"
 #include "ptpslave.h"
 

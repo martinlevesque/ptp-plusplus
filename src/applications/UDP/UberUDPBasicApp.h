@@ -48,8 +48,8 @@ class INET_API UberUDPBasicApp : public ApplicationBase
     int numSent;
     int numReceived;
 
-    static simsignal_t sentPkSignal;
-    static simsignal_t rcvdPkSignal;
+    //static simsignal_t sentPkSignal;
+    //static simsignal_t rcvdPkSignal;
 
     // chooses random destination address
     virtual IPvXAddress chooseDestAddr();

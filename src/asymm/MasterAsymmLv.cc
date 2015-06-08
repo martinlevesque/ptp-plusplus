@@ -20,7 +20,7 @@
 #include <iostream>
 #include "ApplicationBase.h"
 #include "MasterAsymmLv.h"
-#include "Ptp.h"
+#include "ptp.h"
 #include "MACAddress.h"
 
 using namespace std;

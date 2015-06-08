@@ -8,3 +8,8 @@ PTP is implemented as a UDP application as in the standard (https://standards.ie
 
 Some sub-modules were adapted from https://github.com/JenSte/omnet-ptp
 
+Tested with:
+
+- Mac OS X v. 10.9.5
+- Ubuntu 14.04
+

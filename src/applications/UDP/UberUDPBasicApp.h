@@ -32,7 +32,7 @@
 /**
  * UDP application. See NED for more info.
  */
-class INET_API UberUDPBasicApp : public ApplicationBase
+class UberUDPBasicApp : public ApplicationBase
 {
   protected:
     enum SelfMsgKinds { START = 1, SEND, STOP };

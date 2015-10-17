@@ -29,7 +29,7 @@
 /**
  * Consumes and prints packets received from the UDP module. See NED for more info.
  */
-class INET_API UberUDPSink : public ApplicationBase
+class UberUDPSink : public ApplicationBase
 {
   protected:
     UDPSocket socket;
